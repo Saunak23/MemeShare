@@ -60,3 +60,10 @@ Some important attributes used to describe a ProgressBar are given below.
 
 **style :** By default the progress bar will be displayed as a spinning wheel. If we want it to be displayed as a horizontal bar, we need to set the attribute as : style=”?android:attr/progressBarStyleHorizontal”.
 
+<h2> Glide Library </h2>
+Glide is an Image Loader Library for Android developed by bumptech and is a library that is recommended by Google. It has been used in many Google open source projects including Google I/O 2014 official application. It provides animated GIF support and handles image loading/caching.
+
+<h2> Singleton Class </h2>
+If your application makes constant use of the network, it's probably most efficient to set up a single instance of RequestQueue that will last the lifetime of your app. You can achieve this in various ways. The recommended approach is to implement a singleton class that encapsulates RequestQueue and other Volley functionality. Another approach is to subclass Application and set up the RequestQueue in Application.onCreate(). But this approach is discouraged; a static singleton can provide the same functionality in a more modular way.
+
+A key concept is that the RequestQueue must be instantiated with the Application context, not an Activity context. This ensures that the RequestQueue will last for the lifetime of your app, instead of being recreated every time the activity is recreated (for example, when the user rotates the device).
